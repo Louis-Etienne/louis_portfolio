@@ -65,7 +65,7 @@ export function MediaGallery({ media }: { media: ProjectMedia[] }) {
 					>
 						<div className="xp-titlebar -mx-[3px] flex h-[29px] items-center gap-1.5 rounded-t-lg px-2">
 							<DialogTitle className="min-w-0 flex-1 truncate font-display text-[13px] font-bold text-white">
-								{current.alt} - Windows Picture and Fax Viewer
+								{current.alt} - Picture and Fax Viewer
 							</DialogTitle>
 							<DialogClose
 								aria-label="Close"

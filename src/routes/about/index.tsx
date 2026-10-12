@@ -40,40 +40,166 @@ const school = [
 	},
 ];
 
-const papers: { title: string; years: string; detail: string }[] = [];
+const papers: {
+	title: string;
+	years: string;
+	detail: string;
+	href: string;
+	authors: string[];
+}[] = [
+	{
+		title: "SpotLight: Shadow-Guided Object Relighting via Diffusion",
+		years: "2024",
+		detail: "",
+		href: "https://lvsn.github.io/spotlight/",
+		authors: [
+			"Frédéric Fortier-Chouinard",
+			"Zitian Zhang",
+			"Louis-Étienne Messier",
+			"Mathieu Garon",
+			"Anand Bhattad",
+			"Jean-François Lalonde",
+		],
+	},
+];
 
 const jobs: { title: string; place: string; years: string; detail: string }[] =
-	[];
+	[
+		{
+			title: "Internship - Fullstack Intern",
+			place: "Kaleido",
+			years: "may 2026 - august 2026",
+			detail: "Maintenance of a live financial web product",
+		},
+		{
+			title: "R&D Developer",
+			place: "Creaform-Ametek",
+			years: "september 2025 - may 2026",
+			detail:
+				"Integration of machine learning vision models into professional software",
+		},
+		{
+			title: "Internship - R&D Developer",
+			place: "Creaform-Ametek",
+			years: "may 2025 - august 2025",
+			detail:
+				"Integration of machine learning vision models into professional software",
+		},
+		{
+			title: "Lab Assistant",
+			place: "Computer Vision and Systems Laboratory of Laval University",
+			years: "september 2024 - december 2024",
+			detail:
+				"Code adaptation of modern computer vision methods for benchmarking",
+		},
+		{
+			title: "Internship - Lab Assistant",
+			place: "Computer Vision and Systems Laboratory of Laval University",
+			years: "may 2024 - august 2024",
+			detail:
+				"Code adaptation of modern computer vision methods for benchmarking",
+		},
+	];
 
 const extracurricular: {
 	title: string;
 	place: string;
 	years: string;
 	detail: string;
-}[] = [];
+	points?: string[];
+}[] = [
+	{
+		title: "Vice-President of Logistics",
+		place: "IA Club of Laval University",
+		years: "january 2025 - april 2026",
+		detail: "",
+		points: ["Conception and management of local GPU-heavy compute servers"],
+	},
+	{
+		title: "Project Leader of Flappy EEG",
+		place: "IA Club of Laval University",
+		years: "january 2025 - may 2025",
+		detail: "",
+		points: [
+			"Team leader for an undergraduate EEG signal interpretation project",
+			"Working with embedded systems",
+			"Functional prototype built",
+		],
+	},
+	{
+		title: "Certified in Emergency First Aid & CPR/AED Level C",
+		place: "Red Cross",
+		years: "december 2024",
+		detail: "",
+	},
+	{
+		title: "Vice-President of Recruitment",
+		place: "IA Club of Laval University",
+		years: "january 2024 - january 2025",
+		detail: "",
+		points: [
+			"Club growth from active members to 40+",
+			"Creation and management of the Scientific Reading Group to gather people and talk about specific AI papers",
+			"Management of tutorials on machine learning",
+		],
+	},
+];
 
 function Entry({
 	title,
 	place,
 	years,
 	detail,
+	href,
+	authors,
+	points,
 }: {
 	title: string;
 	place?: string;
 	years?: string;
 	detail?: string;
+	href?: string;
+	authors?: string[];
+	points?: string[];
 }) {
 	return (
 		<div>
 			<div className="flex items-baseline justify-between gap-3">
-				<p className="font-display font-bold text-[#2a3f73]">{title}</p>
+				<p className="font-display font-bold text-[#2a3f73]">
+					{href ? (
+						<a
+							href={href}
+							target="_blank"
+							rel="noreferrer"
+							className="underline decoration-[#c6b083] underline-offset-2 hover:text-[#1f5fc4]"
+						>
+							{title}
+						</a>
+					) : (
+						title
+					)}
+				</p>
 				{years && (
 					<p className="shrink-0 font-sans text-[12px] text-[#6f5a3a] tabular-nums">
 						{years}
 					</p>
 				)}
 			</div>
+			{authors && authors.length > 0 && (
+				<ul className="mt-0.5 list-disc pl-4 text-[13px] text-[#6f5a3a]">
+					{authors.map((author) => (
+						<li key={author}>{author}</li>
+					))}
+				</ul>
+			)}
 			{place && <p className="text-[13px] text-[#6f5a3a]">{place}</p>}
+			{points && points.length > 0 && (
+				<ul className="mt-0.5 list-disc pl-4 text-[13px] text-[#6f5a3a]">
+					{points.map((point) => (
+						<li key={point}>{point}</li>
+					))}
+				</ul>
+			)}
 			{detail && <p>{detail}</p>}
 		</div>
 	);
