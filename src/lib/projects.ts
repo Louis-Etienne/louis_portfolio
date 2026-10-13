@@ -133,6 +133,74 @@ export const categories: Category[] = [
 ];
 
 export const projects: Project[] = [
+	
+	{
+		to: "/projects/softwares/TestingDirectX11",
+		title: "Testing DirectX11",
+		category: "softwares",
+		tagline: "Tests! Woohoo!",
+		status: "personnal",
+		year: "2021",
+		tech: ["C++", "DirectX 11", "Win32", "HLSL"],
+		summary: [
+			"A testing ground for the DirectX 11 API: a scene where a free camera navigates a 3D environment to observe different rendering phenomena, written with nothing but DirectX 11 and Win32.",
+		],
+		learned: [
+			"The math behind computer graphics: matrices, vertices, indices, normals and the rendering pipeline.",
+		],
+		media: [
+			{ type: "video", src: testingDirectXDemo, alt: "DirectX 11 scene demo" },
+		],
+	},
+	{
+		to: "/projects/softwares/FreeCarve",
+		title: "Free Carve",
+		category: "softwares",
+		tagline: "Free is good, nothing is better than free",
+		context: "Software Engineering class",
+		status: "school",
+		year: "2024",
+		media: [
+			{ type: "image", src: freeCarveLogo, alt: "Free Carve logo" },
+			{ type: "video", src: freeCarveVideo, alt: "Free Carve demo" },
+		],
+		tech: ["Java", "Swing", "GCODE", "GRASP"],
+		summary: [
+			"A GCODE generator for CNC machines that emulates a panel saw, with a user friendly UI designed by the team.",
+		],
+		learned: [
+			"The WHY of object oriented programming through the GRASP principles: low coupling, high cohesion, protected variations and friends.",
+		],
+	},
+	{
+		to: "/projects/softwares/Audito",
+		title: "Audito",
+		category: "softwares",
+		tagline: "Share audio with friends!",
+		status: "personnal",
+		year: "2025",
+		tech: ["WebRTC", "Heroku", "Audio", "JavaScript"],
+		summary: [
+			"A little WebRTC (Web Real-Time Communication) frontend and backend to allow friends to connect and share audio through multiple computers. The project was born out of the desire to listen to a show with a friend of mine in a crowded space without sharing headphones.",
+		],
+		media: [
+			{ type: "image", src: auditoLogo, alt: "Audito logo" },
+			{ type: "video", src: auditoDemo1, alt: "Audito demo" },
+			{ type: "video", src: auditoDemo2, alt: "Audito demo" },
+		],
+	},
+	{
+		to: "/projects/softwares/NotDiscord",
+		title: "Not Discord",
+		category: "softwares",
+		tagline: "Write-up coming soon",
+		status: "in-progress",
+		year: "2026",
+		tech: [],
+		summary: [
+			"The page for this project is still being written. Check back soon!",
+		],
+	},
 	{
 		to: "/projects/games/NotASandbox",
 		title: "Not A Sandbox",
@@ -307,73 +375,6 @@ export const projects: Project[] = [
 		],
 	},
 	{
-		to: "/projects/softwares/TestingDirectX11",
-		title: "Testing DirectX11",
-		category: "softwares",
-		tagline: "Tests! Woohoo!",
-		status: "personnal",
-		year: "2021",
-		tech: ["C++", "DirectX 11", "Win32", "HLSL"],
-		summary: [
-			"A testing ground for the DirectX 11 API: a scene where a free camera navigates a 3D environment to observe different rendering phenomena, written with nothing but DirectX 11 and Win32.",
-		],
-		learned: [
-			"The math behind computer graphics: matrices, vertices, indices, normals and the rendering pipeline.",
-		],
-		media: [
-			{ type: "video", src: testingDirectXDemo, alt: "DirectX 11 scene demo" },
-		],
-	},
-	{
-		to: "/projects/softwares/FreeCarve",
-		title: "Free Carve",
-		category: "softwares",
-		tagline: "Free is good, nothing is better than free",
-		context: "Software Engineering class",
-		status: "school",
-		year: "2024",
-		media: [
-			{ type: "image", src: freeCarveLogo, alt: "Free Carve logo" },
-			{ type: "video", src: freeCarveVideo, alt: "Free Carve demo" },
-		],
-		tech: ["Java", "Swing", "GCODE", "GRASP"],
-		summary: [
-			"A GCODE generator for CNC machines that emulates a panel saw, with a user friendly UI designed by the team.",
-		],
-		learned: [
-			"The WHY of object oriented programming through the GRASP principles: low coupling, high cohesion, protected variations and friends.",
-		],
-	},
-	{
-		to: "/projects/softwares/Audito",
-		title: "Audito",
-		category: "softwares",
-		tagline: "Share audio with friends!",
-		status: "personnal",
-		year: "2025",
-		tech: ["WebRTC", "Heroku", "Audio", "JavaScript"],
-		summary: [
-			"A little WebRTC (Web Real-Time Communication) frontend and backend to allow friends to connect and share audio through multiple computers. The project was born out of the desire to listen to a show with a friend of mine in a crowded space without sharing headphones.",
-		],
-		media: [
-			{ type: "image", src: auditoLogo, alt: "Audito logo" },
-			{ type: "video", src: auditoDemo1, alt: "Audito demo" },
-			{ type: "video", src: auditoDemo2, alt: "Audito demo" },
-		],
-	},
-	{
-		to: "/projects/softwares/NotDiscord",
-		title: "Not Discord",
-		category: "softwares",
-		tagline: "Write-up coming soon",
-		status: "in-progress",
-		year: "2026",
-		tech: [],
-		summary: [
-			"The page for this project is still being written. Check back soon!",
-		],
-	},
-	{
 		to: "/projects/websites/XPPortfolio",
 		title: "XP Portfolio",
 		category: "websites",
@@ -462,7 +463,7 @@ export const projects: Project[] = [
 		summary: [
 			"A very simple headless ubuntu server running my projects, including this webpage.",
 			"The stack runs a Coolify instance to launch docker services easily.",
-			"I named him Server because he is very dear to me."
+			"I named him Servy because he is very dear to me."
 		],
 		media: [
 			{ type: "image", src: servyPhoto, alt: "Servy, a small ThinkCentre computer" },
