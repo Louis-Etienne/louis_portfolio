@@ -28,6 +28,7 @@ import { Route as ProjectsSoftwaresFreeCarveRouteImport } from './routes/project
 import { Route as ProjectsSoftwaresNotDiscordRouteImport } from './routes/projects/softwares/NotDiscord'
 import { Route as ProjectsSoftwaresTestingDirectX11RouteImport } from './routes/projects/softwares/TestingDirectX11'
 import { Route as ProjectsWebsitesLouisMenagerieRouteImport } from './routes/projects/websites/LouisMenagerie'
+import { Route as ProjectsWebsitesRicochetRouteImport } from './routes/projects/websites/Ricochet'
 import { Route as ProjectsWebsitesXPPortfolioRouteImport } from './routes/projects/websites/XPPortfolio'
 
 const IndexRoute = IndexRouteImport.update({
@@ -136,6 +137,12 @@ const ProjectsWebsitesLouisMenagerieRoute =
     path: '/projects/websites/LouisMenagerie',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ProjectsWebsitesRicochetRoute =
+  ProjectsWebsitesRicochetRouteImport.update({
+    id: '/projects/websites/Ricochet',
+    path: '/projects/websites/Ricochet',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProjectsWebsitesXPPortfolioRoute =
   ProjectsWebsitesXPPortfolioRouteImport.update({
     id: '/projects/websites/XPPortfolio',
@@ -163,6 +170,7 @@ export interface FileRoutesByFullPath {
   '/projects/softwares/NotDiscord': typeof ProjectsSoftwaresNotDiscordRoute
   '/projects/softwares/TestingDirectX11': typeof ProjectsSoftwaresTestingDirectX11Route
   '/projects/websites/LouisMenagerie': typeof ProjectsWebsitesLouisMenagerieRoute
+  '/projects/websites/Ricochet': typeof ProjectsWebsitesRicochetRoute
   '/projects/websites/XPPortfolio': typeof ProjectsWebsitesXPPortfolioRoute
 }
 export interface FileRoutesByTo {
@@ -185,6 +193,7 @@ export interface FileRoutesByTo {
   '/projects/softwares/NotDiscord': typeof ProjectsSoftwaresNotDiscordRoute
   '/projects/softwares/TestingDirectX11': typeof ProjectsSoftwaresTestingDirectX11Route
   '/projects/websites/LouisMenagerie': typeof ProjectsWebsitesLouisMenagerieRoute
+  '/projects/websites/Ricochet': typeof ProjectsWebsitesRicochetRoute
   '/projects/websites/XPPortfolio': typeof ProjectsWebsitesXPPortfolioRoute
 }
 export interface FileRoutesById {
@@ -208,6 +217,7 @@ export interface FileRoutesById {
   '/projects/softwares/NotDiscord': typeof ProjectsSoftwaresNotDiscordRoute
   '/projects/softwares/TestingDirectX11': typeof ProjectsSoftwaresTestingDirectX11Route
   '/projects/websites/LouisMenagerie': typeof ProjectsWebsitesLouisMenagerieRoute
+  '/projects/websites/Ricochet': typeof ProjectsWebsitesRicochetRoute
   '/projects/websites/XPPortfolio': typeof ProjectsWebsitesXPPortfolioRoute
 }
 export interface FileRouteTypes {
@@ -232,6 +242,7 @@ export interface FileRouteTypes {
     | '/projects/softwares/NotDiscord'
     | '/projects/softwares/TestingDirectX11'
     | '/projects/websites/LouisMenagerie'
+    | '/projects/websites/Ricochet'
     | '/projects/websites/XPPortfolio'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -254,6 +265,7 @@ export interface FileRouteTypes {
     | '/projects/softwares/NotDiscord'
     | '/projects/softwares/TestingDirectX11'
     | '/projects/websites/LouisMenagerie'
+    | '/projects/websites/Ricochet'
     | '/projects/websites/XPPortfolio'
   id:
     | '__root__'
@@ -276,6 +288,7 @@ export interface FileRouteTypes {
     | '/projects/softwares/NotDiscord'
     | '/projects/softwares/TestingDirectX11'
     | '/projects/websites/LouisMenagerie'
+    | '/projects/websites/Ricochet'
     | '/projects/websites/XPPortfolio'
   fileRoutesById: FileRoutesById
 }
@@ -299,6 +312,7 @@ export interface RootRouteChildren {
   ProjectsSoftwaresNotDiscordRoute: typeof ProjectsSoftwaresNotDiscordRoute
   ProjectsSoftwaresTestingDirectX11Route: typeof ProjectsSoftwaresTestingDirectX11Route
   ProjectsWebsitesLouisMenagerieRoute: typeof ProjectsWebsitesLouisMenagerieRoute
+  ProjectsWebsitesRicochetRoute: typeof ProjectsWebsitesRicochetRoute
   ProjectsWebsitesXPPortfolioRoute: typeof ProjectsWebsitesXPPortfolioRoute
 }
 
@@ -437,6 +451,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsWebsitesLouisMenagerieRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/websites/Ricochet': {
+      id: '/projects/websites/Ricochet'
+      path: '/projects/websites/Ricochet'
+      fullPath: '/projects/websites/Ricochet'
+      preLoaderRoute: typeof ProjectsWebsitesRicochetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/websites/XPPortfolio': {
       id: '/projects/websites/XPPortfolio'
       path: '/projects/websites/XPPortfolio'
@@ -468,6 +489,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsSoftwaresTestingDirectX11Route:
     ProjectsSoftwaresTestingDirectX11Route,
   ProjectsWebsitesLouisMenagerieRoute: ProjectsWebsitesLouisMenagerieRoute,
+  ProjectsWebsitesRicochetRoute: ProjectsWebsitesRicochetRoute,
   ProjectsWebsitesXPPortfolioRoute: ProjectsWebsitesXPPortfolioRoute,
 }
 export const routeTree = rootRouteImport

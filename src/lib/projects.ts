@@ -57,6 +57,13 @@ import calculatorWelcome from "@/data/Calculator/Capture.PNG";
 import hangmanPlay from "@/data/Hangman/Hangman2.png";
 import servyPhoto from "@/data/Servy/servy.jpg";
 import xpportfolio from "@/data/XpPortfolio/Screenshot from 2026-10-12 18-13-01.png"
+import ricochetMe1 from "@/data/Ricochet/moi_1.jpeg"
+import ricochetMe2 from "@/data/Ricochet/moi_2.jpeg"
+import ricochetSite1 from "@/data/Ricochet/site_1.png"
+import ricochetSite2 from "@/data/Ricochet/site_2.png"
+import ricochetSite3 from "@/data/Ricochet/site_3.png"
+
+
 
 import type { FileRoutesByTo } from "@/routeTree.gen";
 
@@ -404,6 +411,31 @@ export const projects: Project[] = [
 		media: [
 			{ type: "image", src: louisMenagerieHome, alt: "Louis' Menagerie homepage" },
 		],
+	},
+	{
+		to: "/projects/websites/Ricochet",
+		title: "Ricochet",
+		category: "websites",
+		tagline: "What made us win the Quebec International 2026 Hackathon",
+		status: "personnal",
+		year: "2026",
+		tech: ["Railway", "Tanstack"],
+		summary: [
+			"A simple showcase website showing the Ricochet initiative, the connection engine to revitalize Saint-Roch.",
+			"This project was made for the Quebec International 2026 Hackathon, and our team won the 2nd place after a great presentation!"
+		],
+		learned: [
+			"Sometimes, branding and charisma wins over pure raw technical strengh.",
+			"Before the competition I made a plan and sticked to it : Branding over Code, Logo over Code, Pitch over Code."
+		],
+		media:[
+			{type: "image", src: ricochetMe1, alt: "Me in the middle of the presentation"},
+			{type: "image", src: ricochetMe2, alt: "Also me in the middle of the presentation"},
+			{type: "image", src: ricochetSite1, alt: "Ricochet website"},
+			{type: "image", src: ricochetSite2, alt: "Ricochet website"},
+			{type: "image", src: ricochetSite3, alt: "Ricochet website"},
+		]
+
 	},
 	{
 		to: "/projects/console/ConsoleSnake",
